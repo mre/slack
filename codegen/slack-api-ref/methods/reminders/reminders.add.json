@@ -1,0 +1,42 @@
+{
+  "group": "reminders",
+  "name": "reminders.add",
+  "desc": "This method creates a reminder.",
+  "args": {
+    "text": {
+      "required": true,
+      "example": "eat a banana",
+      "desc": "The content of the reminder."
+    },
+    "time": {
+      "required": true,
+      "example": "1602288000",
+      "desc": "When this reminder should happen: the Unix timestamp (up to five years from now), the number of seconds until the reminder (if within 24 hours), or a natural language description (Ex. \"in 15 minutes,\" or \"every Thursday\")."
+    },
+    "user": {
+      "required": false,
+      "example": "U18888888",
+      "desc": "The user who will receive the reminder. If no user is specified, the reminder will go to user who created it.",
+      "type": "user"
+    }
+  },
+  "errors": {
+    "cannot_parse": "The phrasing of the timing for this reminder is unclear. You must include a complete time description. Some examples that work: 1458678068, 20, in 5 minutes, tomorrow, at 3:30pm, on Tuesday, or next week.",
+    "user_not_found": "That user can't be found.",
+    "cannot_add_bot": "Reminders can't be sent to bots.",
+    "cannot_add_slackbot": "Reminders can't be sent to Slackbot.",
+    "cannot_add_others": "Guests can't set reminders for other team members.",
+    "cannot_add_others_recurring": "Recurring reminders can't be set for other team members.",
+    "not_authed": "No authentication token provided.",
+    "invalid_auth": "Invalid authentication token.",
+    "account_inactive": "Authentication token is for a deleted user or team.",
+    "user_is_bot": "This method cannot be called by a bot user.",
+    "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of common decency. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
+    "invalid_array_arg": "The method was passed a PHP-style array argument (e.g. with a name like foo[7]). These are never valid with the Slack API.",
+    "invalid_charset": "The method was called via a POST request, but the charset specified in the Content-Type header was invalid. Valid charset names are: utf-8 iso-8859-1.",
+    "invalid_form_data": "The method was called via a POST request with Content-Type application/x-www-form-urlencoded or multipart/form-data, but the form data was either missing or syntactically invalid.",
+    "invalid_post_type": "The method was called via a POST request, but the specified Content-Type was invalid. Valid types are: application/json application/x-www-form-urlencoded multipart/form-data text/plain.",
+    "missing_post_type": "The method was called via a POST request and included a data payload, but the request did not include a Content-Type header.",
+    "request_timeout": "The method was called via a POST request, but the POST data was either missing or truncated."
+  }
+}

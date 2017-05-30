@@ -1,0 +1,25 @@
+[package]
+name = "slack-rs"
+version = "0.8.0"
+authors = ["Matthias Endler <matthias-endler@gmx.net>"]
+build = "build.rs"
+
+[features]
+# Treat warnings as a build error:
+# cargo build --features "strict"
+strict = []
+
+[dependencies]
+error-chain = "0.10.0"
+hyper = "0.10.0"
+serde = "0.9.7"
+serde_derive = "0.9.7"
+serde_json = "0.9.6"
+serde_urlencoded = "0.4.2"
+
+[dev-dependencies]
+yup-hyper-mock = "2.0.0"
+log = "*"  # log macros are used within yup-hyper-mock
+
+[build-dependencies]
+codegen = { path = "codegen" }

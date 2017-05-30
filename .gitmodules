@@ -1,0 +1,3 @@
+[submodule "codegen/slack-api-ref"]
+	path = codegen/slack-api-ref
+	url = git@github.com:dblock/slack-api-ref.git

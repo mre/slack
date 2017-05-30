@@ -1,0 +1,52 @@
+{
+  "group": "mpim",
+  "name": "mpim.history",
+  "desc": "This method returns a portion of messages/events from the specified multiparty direct message channel.\nTo read the entire history for a multiparty direct message, call the method with no latest or\noldest arguments, and then continue paging using the instructions below.",
+  "args": {
+    "channel": {
+      "required": true,
+      "example": "G1234567890",
+      "desc": "Multiparty direct message to fetch history for.",
+      "type": "channel"
+    },
+    "latest": {
+      "required": false,
+      "example": "1234567890.123456",
+      "desc": "End of time range of messages to include in results.",
+      "type": "timestamp"
+    },
+    "oldest": {
+      "required": false,
+      "example": "1234567890.123456",
+      "desc": "Start of time range of messages to include in results.",
+      "type": "timestamp"
+    },
+    "inclusive": {
+      "required": false,
+      "example": "1",
+      "desc": "Include messages with latest or oldest timestamp in results."
+    },
+    "unreads": {
+      "required": false,
+      "example": "1",
+      "desc": "Include unread_count_display in the output?."
+    }
+  },
+  "errors": {
+    "channel_not_found": "Value passed for channel was invalid.",
+    "invalid_ts_latest": "Value passed for latest was invalid.",
+    "invalid_ts_oldest": "Value passed for oldest was invalid.",
+    "not_authed": "No authentication token provided.",
+    "invalid_auth": "Invalid authentication token.",
+    "account_inactive": "Authentication token is for a deleted user or team.",
+    "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of common decency. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
+    "invalid_array_arg": "The method was passed a PHP-style array argument (e.g. with a name like foo[7]). These are never valid with the Slack API.",
+    "invalid_charset": "The method was called via a POST request, but the charset specified in the Content-Type header was invalid. Valid charset names are: utf-8 iso-8859-1.",
+    "invalid_form_data": "The method was called via a POST request with Content-Type application/x-www-form-urlencoded or multipart/form-data, but the form data was either missing or syntactically invalid.",
+    "invalid_post_type": "The method was called via a POST request, but the specified Content-Type was invalid. Valid types are: application/json application/x-www-form-urlencoded multipart/form-data text/plain.",
+    "missing_post_type": "The method was called via a POST request and included a data payload, but the request did not include a Content-Type header.",
+    "request_timeout": "The method was called via a POST request, but the POST data was either missing or truncated."
+  },
+  "has_paging": true,
+  "default_count": 100
+}

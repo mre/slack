@@ -1,0 +1,34 @@
+{
+  "name": "subteam_created",
+  "desc": "A User Group has been added to the team.",
+  "long_desc": "The subteam_created event is sent to all connections for a team when a new User Group is created. Clients can use this to update their local list of User Groups and group members.",
+  "required_scope": "usergroups:read",
+  "example": {
+    "type": "subteam_created",
+    "subteam": {
+      "id": "S0615G0KT",
+      "team_id": "T060RNRCH",
+      "is_usergroup": true,
+      "name": "Marketing Team",
+      "description": "Marketing gurus, PR experts and product advocates.",
+      "handle": "marketing-team",
+      "is_external": false,
+      "date_create": 1446746793,
+      "date_update": 1446746793,
+      "date_delete": 0,
+      "auto_type": null,
+      "created_by": "U060RNRCZ",
+      "updated_by": "U060RNRCZ",
+      "deleted_by": null,
+      "prefs": {
+        "channels": [
+
+        ],
+        "groups": [
+
+        ]
+      },
+      "user_count": "0"
+    }
+  }
+}

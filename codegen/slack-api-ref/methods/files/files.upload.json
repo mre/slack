@@ -1,0 +1,57 @@
+{
+  "group": "files",
+  "name": "files.upload",
+  "desc": "This method allows you to create or upload an existing file.",
+  "args": {
+    "file": {
+      "required": false,
+      "example": "...",
+      "desc": "File contents via multipart/form-data. If omitting this parameter, you must submit content.",
+      "type": "file"
+    },
+    "content": {
+      "required": false,
+      "example": "...",
+      "desc": "File contents via a POST variable. If omitting this parameter, you must provide a file."
+    },
+    "filetype": {
+      "required": false,
+      "example": "php",
+      "desc": "A file type identifier."
+    },
+    "filename": {
+      "required": true,
+      "example": "foo.txt",
+      "desc": "Filename of file."
+    },
+    "title": {
+      "required": false,
+      "example": "My File",
+      "desc": "Title of file."
+    },
+    "initial_comment": {
+      "required": false,
+      "example": "Best!",
+      "desc": "Initial comment to add to file."
+    },
+    "channels": {
+      "required": false,
+      "example": "C1234567890",
+      "desc": "Comma-separated list of channel names or IDs where the file will be shared."
+    }
+  },
+  "errors": {
+    "posting_to_general_channel_denied": "An admin has restricted posting to the #general channel.",
+    "invalid_channel": "One or more channels supplied are invalid.",
+    "not_authed": "No authentication token provided.",
+    "invalid_auth": "Invalid authentication token.",
+    "account_inactive": "Authentication token is for a deleted user or team.",
+    "invalid_arg_name": "The method was passed an argument whose name falls outside the bounds of common decency. This includes very long names and names with non-alphanumeric characters other than _. If you get this error, it is typically an indication that you have made a very malformed API call.",
+    "invalid_array_arg": "The method was passed a PHP-style array argument (e.g. with a name like foo[7]). These are never valid with the Slack API.",
+    "invalid_charset": "The method was called via a POST request, but the charset specified in the Content-Type header was invalid. Valid charset names are: utf-8 iso-8859-1.",
+    "invalid_form_data": "The method was called via a POST request with Content-Type application/x-www-form-urlencoded or multipart/form-data, but the form data was either missing or syntactically invalid.",
+    "invalid_post_type": "The method was called via a POST request, but the specified Content-Type was invalid. Valid types are: application/json application/x-www-form-urlencoded multipart/form-data text/plain.",
+    "missing_post_type": "The method was called via a POST request and included a data payload, but the request did not include a Content-Type header.",
+    "request_timeout": "The method was called via a POST request, but the POST data was either missing or truncated."
+  }
+}
