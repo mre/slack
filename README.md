@@ -13,6 +13,8 @@ documentation is not machine-readable. There is [an open ticket](https://github.
 Because of that I need to halt this project for the near future.  
 I'm uploading it anyway to inspire fellow Rustaceans.
 
+**Update**: There is an OpenAPI-based machine-readable spec available now. See [here](https://github.com/slackapi/slack-api-specs). Maybe someone wants to give it a shot.
+
 ## Goals
 
 * Great ergonomics. Easy to use.
